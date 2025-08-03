@@ -44,34 +44,34 @@ export const Enlaces = () => {
 
   return (
     // Enlaces Redes
-    <ul className="enlaces flex justify-center items-center h-12 mt-4 gap-4 text-lg md:mt-8 md:gap-8 md:text-xl lg:w-1/2 xl:text-2xl">
-      <li className="hover:scale-110 transition-all duration-500">
+    <ul className="relative flex justify-center items-center h-12 mt-4 gap-6 z-1 text-lg">
+      <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.facebook} target="_blank">
           <FaFacebook />
         </a>
       </li>
-      <li className="hover:scale-110 transition-all duration-500">
+      <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.twitter} target="_blank">
           <FaTwitter />
         </a>
       </li>
-      <li className="hover:scale-110 transition-all duration-500">
+      <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.linkedIn} target="_blank">
           <FaLinkedin />
         </a>
       </li>
-      <li className="hover:scale-110 transition-all duration-500">
+      <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.github} target="_blank">
           <FaGithub />
         </a>
       </li>
-      <li className="hover:scale-110 transition-all duration-500">
+      <li className="hover:scale-110 transition-transform duration-500">
         <a href={curriculum} download={true}>
           <FaFilePdf />
         </a>
       </li>
       {/* Botón Cambiar Modo */}
-      <li className="h-1/2 hover:scale-110 transition-all duration-500">
+      <li className="h-1/2 hover:scale-110 transition-transform duration-500">
         <Button onClick={toggleColorMode}>
           {colorMode === "dark" ? <FaMoon /> : <FaSun />}
         </Button>

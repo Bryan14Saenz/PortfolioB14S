@@ -14,6 +14,7 @@ import {
   IoMenu,
 } from "react-icons/io5";
 
+// Nav Component
 export const Nav = () => {
   // State
   const [btnNav, setBtnNav] = useState("open");
@@ -32,11 +33,11 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="navbar mb-6 text-xl md:mb-8 md:text-2xl lg:top-1/5 lg:w-49 xl:top-1/3 xl:text-3xl">
-      <Button className="hidden mx-auto mb-8 lg:flex" onClick={toggleWidth}>
+    <nav className="navbar mb-10 text-xl">
+      <Button className="hidden" onClick={toggleWidth}>
         {btnNav === "open" ? <IoMenu /> : <IoClose />}
       </Button>
-      <ul className="flex justify-center items-center gap-8 md:gap-12 lg:flex-col lg:gap-8">
+      <ul className="flex justify-center items-center gap-8">
         <li>
           <Link
             to="/"

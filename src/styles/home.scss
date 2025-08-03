@@ -1,7 +1,7 @@
+// Home Page
 .helloWorld {
   overflow: hidden;
   white-space: nowrap;
-  width: 100%;
   border-right: 2px solid #ccc;
   animation: typing 16s 0.5s steps(50, end), blink-caret 0.75s step-end infinite;
 }
@@ -10,10 +10,10 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
-// Animaciones
+// Animations
 @keyframes typing {
   from {
     width: 0;
@@ -38,13 +38,6 @@
 
 // Media Queries
 @media screen and (width >=1024px) {
-  .enlaces {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-  }
-
   .navbar {
     overflow: hidden;
     transition: all 0.5s ease;
