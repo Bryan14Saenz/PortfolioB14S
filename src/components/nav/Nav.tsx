@@ -1,5 +1,5 @@
 // Import For React
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // Import For React Router Dom
 import { Link } from "react-router-dom";
 // Import For Components
@@ -24,52 +24,72 @@ export const Nav = () => {
   };
 
   // Change Width Nav
-  useEffect(() => {
-    const handleWidth = () => {
-      const navbar = document.querySelector(".navbar");
+  const toggleWidth = () => {
+    const navbar = document.querySelector(".navbar") as HTMLElement;
 
-      if (navbar) {
-        navbar.style.width = btnNav === "open" ? "70px" : "200px";
-      }
-    };
-
-    handleWidth();
-  }, [btnNav]);
+    navbar.style.width = btnNav === "open" ? "220px" : "50px";
+    toggleIcon();
+  };
 
   return (
-    <nav className="mt-40">
-      <Button className="hidden md:block" onClick={toggleIcon}>
-        {btnNav === "open" ? <IoClose /> : <IoMenu />}
+    <nav className="navbar mb-6 text-xl md:mb-8 md:text-2xl lg:top-1/5 lg:w-49 xl:top-1/3 xl:text-3xl">
+      <Button className="hidden mx-auto mb-8 lg:flex" onClick={toggleWidth}>
+        {btnNav === "open" ? <IoMenu /> : <IoClose />}
       </Button>
-      <ul className="flex items-center justify-center gap-6 text-2xl">
+      <ul className="flex justify-center items-center gap-8 md:gap-12 lg:flex-col lg:gap-8">
         <li>
-          <Link to="/">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
+          >
             <FaHome />
-            <span className="hidden md:block">Inicio</span>
+            <span className={btnNav === "open" ? "hidden" : "block"}>
+              Inicio
+            </span>
           </Link>
         </li>
         <li>
-          <Link to="/techPage">
+          <Link
+            to="/techPage"
+            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
+          >
             <IoCodeSlash />
-            <span className="hidden md:block">Habilidades</span>
+            <span className={btnNav === "open" ? "hidden" : "block"}>
+              Habilidades
+            </span>
           </Link>
         </li>
         <li>
-          <Link to="/projectsPage">
+          <Link
+            to="/projectsPage"
+            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
+          >
             <AiOutlineProduct />
-            <span className="hidden md:block">Proyectos</span>
+            <span className={btnNav === "open" ? "hidden" : "block"}>
+              Proyectos
+            </span>
           </Link>
         </li>
         <li>
-          <Link to="/aboutPage">
+          <Link
+            to="/aboutPage"
+            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
+          >
             <AiOutlineIdcard />
-            <span className="hidden md:block">Sobre mí</span>
+            <span className={btnNav === "open" ? "hidden" : "block"}>
+              Sobre mí
+            </span>
           </Link>
         </li>
         <li>
-          <Link to="/contactPage">
+          <Link
+            to="/contactPage"
+            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
+          >
             <IoChatbubbleEllipsesOutline />
-            <span className="hidden md:block">Contacto</span>
+            <span className={btnNav === "open" ? "hidden" : "block"}>
+              Contacto
+            </span>
           </Link>
         </li>
       </ul>

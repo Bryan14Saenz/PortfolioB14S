@@ -1,0 +1,59 @@
+.helloWorld {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 2px solid #ccc;
+  animation: typing 16s 0.5s steps(50, end), blink-caret 0.75s step-end infinite;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+}
+
+// Animaciones
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: inherit;
+  }
+}
+
+// Media Queries
+@media screen and (width >=1024px) {
+  .enlaces {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+
+  .navbar {
+    overflow: hidden;
+    transition: all 0.5s ease;
+    width: 50px;
+    left: 30px;
+    bottom: auto;
+    margin-bottom: 0;
+    padding: 1.2rem 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+  }
+}
