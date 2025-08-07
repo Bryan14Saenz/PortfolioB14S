@@ -17,25 +17,35 @@ import {
   FaSun,
 } from "react-icons/fa";
 
-// Enlace Component
-export const Enlaces = () => {
+// Interface EnlacesProps
+interface EnlacesProps {
+  darkMode?: boolean;
+}
+
+// Enlaces Component
+export const Enlaces = ({ darkMode }: EnlacesProps) => {
   // State
-  const [colorMode, setColorMode] = useState("dark");
+  const [colorMode, setColorMode] = useState(() => {
+    const saveMode = localStorage.getItem("dark");
+    return saveMode === "true";
+  });
 
   // Change Icon Color
   const toggleColorMode = () => {
-    setColorMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
+    setColorMode((prevMode) => !prevMode);
   };
 
   // Change Color Body
   useEffect(() => {
     const handleColor = () => {
-      if (colorMode === "dark") {
+      if (colorMode) {
         document.body.style.backgroundColor = "#000";
         document.body.style.color = "#fff";
+        localStorage.setItem("dark", "true");
       } else {
         document.body.style.backgroundColor = "#eee";
         document.body.style.color = "#000";
+        localStorage.setItem("dark", "false");
       }
     };
 
@@ -44,7 +54,7 @@ export const Enlaces = () => {
 
   return (
     // Enlaces Redes
-    <ul className="relative flex justify-center items-center h-12 mt-4 gap-6 z-1 text-lg">
+    <ul className="relative flex justify-center items-center h-12 mt-4 gap-6 z-5 text-lg">
       <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.facebook} target="_blank">
           <FaFacebook />
@@ -72,9 +82,13 @@ export const Enlaces = () => {
       </li>
       {/* Botón Cambiar Modo */}
       <li className="h-1/2 hover:scale-110 transition-transform duration-500">
-        <Button onClick={toggleColorMode}>
-          {colorMode === "dark" ? <FaMoon /> : <FaSun />}
-        </Button>
+        {darkMode ? (
+          <Button onClick={toggleColorMode}>
+            {colorMode ? <FaMoon /> : <FaSun />}
+          </Button>
+        ) : (
+          ""
+        )}
       </li>
     </ul>
   );

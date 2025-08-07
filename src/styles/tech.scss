@@ -1,0 +1,13 @@
+// Technology Page
+.slick-slide {
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: all 0.5s ease;
+  }
+
+  svg:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
+}

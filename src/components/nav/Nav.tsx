@@ -21,7 +21,7 @@ export const Nav = () => {
 
   // Change Icon Nav
   const toggleIcon = () => {
-    setBtnNav((prevSection) => (prevSection === "open" ? "close" : "open"));
+    setBtnNav((prevSection) => (prevSection === "open" ? "close" : "open")); // Corregir
   };
 
   // Change Width Nav
@@ -39,10 +39,7 @@ export const Nav = () => {
       </Button>
       <ul className="flex justify-center items-center gap-8">
         <li>
-          <Link
-            to="/"
-            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
-          >
+          <Link to="/">
             <FaHome />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Inicio
@@ -50,10 +47,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="/techPage"
-            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
-          >
+          <Link to="/techPage">
             <IoCodeSlash />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Habilidades
@@ -61,10 +55,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="/projectsPage"
-            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
-          >
+          <Link to="/projectsPage">
             <AiOutlineProduct />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Proyectos
@@ -72,10 +63,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="/aboutPage"
-            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
-          >
+          <Link to="/aboutPage">
             <AiOutlineIdcard />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Sobre mí
@@ -83,10 +71,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="/contactPage"
-            className="flex items-center gap-2 hover:scale-110 transition-all duration-500"
-          >
+          <Link to="/contactPage">
             <IoChatbubbleEllipsesOutline />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Contacto

@@ -1,12 +1,12 @@
-// Import Script Mode For React
+// Import Strict Mode For React
 import { StrictMode } from "react";
 // Import Create Root For React DOM
 import { createRoot } from "react-dom/client";
 // Import BrowserRouter For React Router DOM
 import { BrowserRouter } from "react-router-dom";
-// Import App For React
+// Import Principal App
 import App from "./App.tsx";
-// Import CSS For React
+// Import For Style
 import "./styles/index.css";
 
 // Create For App

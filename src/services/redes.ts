@@ -7,7 +7,7 @@ interface Redes {
   email: string;
 }
 
-// Object For Redes Interfaces
+// Object For Redes
 export const redes: Redes = {
   facebook: "https://www.facebook.com/14BryanSaenz",
   twitter: "https://x.com/14BryanSaenz",

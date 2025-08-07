@@ -1,4 +1,4 @@
-//Import For React
+//Import For Motion React
 import { motion } from "motion/react";
 // Import For Components
 import { Cuadros, Enlaces, Nav } from "../components/";
@@ -21,25 +21,25 @@ export default function HomePage() {
       {/* Cuadros */}
       <Cuadros />
       {/* Enlaces Redes */}
-      <h1 className="relative flex justify-center items-center gap-2 mt-10 text-md z-5 animate-pulse duration-500">
+      <h1 className="relative flex justify-center items-center gap-2 mt-14 z-5 text-md animate-pulse duration-500">
         <FaCode />
         <span>B14S</span>
       </h1>
-      <Enlaces />
+      <Enlaces darkMode={true} />
       {/* Bio */}
-      <div className="relative mt-28 z-5">
+      <div className="relative mt-32 z-5">
         <img
           className="size-34 mx-auto rounded-full"
           src={imgBryan}
           alt="Bryan Sanchez"
         />
-        <h2 className="max-w-44 mx-auto mt-6 text-md text-center">
+        <h2 className="max-w-44 mx-auto mt-6 text-sm text-center">
           Welcome I'm <span className="font-bold">Bryan Sanchez</span> Front-end
           Developer
         </h2>
       </div>
       {/* Hello World */}
-      <h2 className="helloWorld relative max-w-44 mx-auto mt-28 z-5 text-xl text-center font-bold tracking-widest">
+      <h2 className="helloWorld relative max-w-32 mx-auto mt-28 z-5 text-sm text-center font-bold tracking-widest">
         Hello World...
       </h2>
       {/* NavBar */}

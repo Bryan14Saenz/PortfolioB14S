@@ -1,0 +1,22 @@
+// Style For Filter
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+
+  button {
+    cursor: pointer;
+    transition: all 0.5s linear;
+    margin: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    color: inherit;
+    background: transparent;
+
+    &.activo {
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+    }
+  }
+}

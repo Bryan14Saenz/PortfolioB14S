@@ -1,7 +1,7 @@
 // Import For Style
 import "./cuadros.scss";
 
-// Cuadro Component
+// Cuadros Component
 export const Cuadros = () => {
   return (
     <>

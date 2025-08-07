@@ -18,8 +18,8 @@ export default function AboutPage() {
       {/* Cuadros */}
       <Cuadros />
       {/* About */}
-      <div className="text-center mt-10">
-        <h2 className="text-md font-bold">About</h2>
+      <div className="max-w-11/12 mx-auto mt-14 text-center">
+        <h2 className="text-lg font-bold">About</h2>
         <p className="mx-4 mt-6 text-sm">
           🧑‍💻 I'm a web programmer with a solid foundation in front-end
           development, passionate about creating efficient andd engaging
@@ -27,18 +27,18 @@ export default function AboutPage() {
         </p>
       </div>
       {/* Certifications*/}
-      <h2 className="mt-14 text-md text-center font-bold">Certifications</h2>
-      <div className="mt-6">
+      <h2 className="mt-16 text-md text-center font-bold">Certifications</h2>
+      <div className="relative mt-6 z-5">
         <a href={mentorsPdf} download={true}>
           <img
-            className="size-18 mx-auto"
+            className="size-22 mx-auto"
             src={mentorsImg}
             alt="Mentor Certification"
           />
         </a>
       </div>
       {/* Goals */}
-      <h2 className="mt-14 ext-md text-center font-bold">Goals</h2>
+      <h2 className="mt-16 ext-md text-center font-bold">Goals</h2>
       <div className="mt-6 text-sm text-center">
         <ul>
           <li>* Becoming a good full-stack developer</li>

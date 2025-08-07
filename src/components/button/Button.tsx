@@ -1,8 +1,8 @@
 // Interface For Button
 interface ButtonProps {
-  children: React.ReactNode; // Contenido del Botón
-  className?: string; // Clases adicionales
-  onClick?: () => void; // Función que se ejecuta al hacer click
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 
 // Button Component
