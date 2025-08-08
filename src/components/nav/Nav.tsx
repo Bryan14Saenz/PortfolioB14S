@@ -21,7 +21,7 @@ export const Nav = () => {
 
   // Change Icon Nav
   const toggleIcon = () => {
-    setBtnNav((prevSection) => (prevSection === "open" ? "close" : "open")); // Corregir
+    setBtnNav((prevSection) => (prevSection === "open" ? "close" : "open"));
   };
 
   // Change Width Nav
@@ -33,13 +33,13 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="navbar mb-10 text-xl">
-      <Button className="hidden" onClick={toggleWidth}>
+    <nav className="navbar mb-10 text-2xl lg:top-1/5">
+      <Button className="hidden lg:flex lg:mb-4 mx-auto" onClick={toggleWidth}>
         {btnNav === "open" ? <IoMenu /> : <IoClose />}
       </Button>
-      <ul className="flex justify-center items-center gap-8">
+      <ul className="flex justify-center items-center gap-8 md:gap-12 lg:flex-col lg:gap-8">
         <li>
-          <Link to="/">
+          <Link to="/" className="flex justify-center items-center gap-4 hover:scale-110 transition-transform duration-500">
             <FaHome />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Inicio
@@ -47,7 +47,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/techPage">
+          <Link to="/techPage" className="flex justify-center items-center gap-4 hover:scale-110 transition-transform duration-500">
             <IoCodeSlash />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Habilidades
@@ -55,7 +55,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/projectsPage">
+          <Link to="/projectsPage" className="flex justify-center items-center gap-4 hover:scale-110 transition-transform duration-500">
             <AiOutlineProduct />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Proyectos
@@ -63,7 +63,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/aboutPage">
+          <Link to="/aboutPage" className="flex justify-center items-center gap-4 hover:scale-110 transition-transform duration-500">
             <AiOutlineIdcard />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Sobre mí
@@ -71,7 +71,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/contactPage">
+          <Link to="/contactPage" className="flex justify-center items-center gap-4 hover:scale-110 transition-transform duration-500">
             <IoChatbubbleEllipsesOutline />
             <span className={btnNav === "open" ? "hidden" : "block"}>
               Contacto

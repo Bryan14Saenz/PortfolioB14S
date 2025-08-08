@@ -11,3 +11,17 @@
   color: inherit;
   background: transparent;
 }
+
+@media screen and (width >= 768px) {
+  .prev,
+  .next {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .prev,
+  .next {
+    font-size: 2rem;
+  }
+}

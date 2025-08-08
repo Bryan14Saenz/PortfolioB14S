@@ -54,7 +54,7 @@ export const Enlaces = ({ darkMode }: EnlacesProps) => {
 
   return (
     // Enlaces Redes
-    <ul className="relative flex justify-center items-center h-12 mt-4 gap-6 z-5 text-lg">
+    <ul className="enlaces relative flex justify-center items-center h-12 mt-4 gap-6 z-5 text-lg md:text-xl md:mt-8 md:gap-8 lg:absolute lg:w-2/3 lg:top-7 right-0 lg:text-2xl">
       <li className="hover:scale-110 transition-transform duration-500">
         <a href={redes.facebook} target="_blank">
           <FaFacebook />

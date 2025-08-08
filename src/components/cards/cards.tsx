@@ -11,7 +11,7 @@ export const Cards = () => {
     <button
       key={repo.id}
       onClick={() => window.open(repo.html_url, "_blank")}
-      className="relative cursor-pointer w-[250px] p-4 mt-2 mx-auto z-5 rounded-xl border border-[inherit] text-left"
+      className="relative cursor-pointer w-[250px] p-4 mt-2 mx-auto z-5 rounded-xl border border-[inherit] text-left hover:scale-105 transition-all duration-300"
     >
       <h2 className="text-md font-bold">{repo.name}</h2>
       <p className="mt-2 text-sm text-gray-600">

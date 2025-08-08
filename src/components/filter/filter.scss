@@ -1,9 +1,11 @@
 // Style For Filter
 .filter {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1rem;
+  z-index: 5;
 
   button {
     cursor: pointer;
@@ -17,6 +19,26 @@
       font-weight: bold;
       text-decoration: underline;
       text-underline-offset: 0.2rem;
+    }
+  }
+}
+
+@media screen and (width >= 768px) {
+  .filter {
+    margin-top: 1.2rem;
+
+    button {
+      margin: 0.4rem;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .filter {
+    margin-top: 0.5rem;
+
+    button {
+      margin: 0.6rem;
     }
   }
 }

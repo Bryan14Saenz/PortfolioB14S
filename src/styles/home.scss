@@ -37,6 +37,11 @@
 
 // Media Queries
 @media screen and (width >=1024px) {
+  .helloWorld {
+    animation: typing 20s 0.5s steps(60, end),
+      blink-caret 0.75s step-end infinite;
+  }
+
   .navbar {
     overflow: hidden;
     transition: all 0.5s ease;

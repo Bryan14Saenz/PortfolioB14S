@@ -11,3 +11,21 @@
     scale: 1.2;
   }
 }
+
+@media screen and (width >= 768px) {
+  .slick-slide {
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .slick-slide {
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

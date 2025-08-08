@@ -22,10 +22,10 @@ export default function ProjectsPage() {
       {/* Cuadros */}
       <Cuadros />
       {/* Projects */}
-      <h2 className="mt-14 text-lg text-center font-bold">Projects</h2>
+      <h2 className="mt-14 text-base text-center font-bold md:mt-18 md:text-lg lg:mt-10 lg:text-xl">Projects</h2>
       <Filter />
       {/* Carrusel */}
-      <div className="relative flex items-center justify-center mt-8">
+      <div className="relative flex items-center justify-center mt-8 md:mt-12 lg:mt-4">
         {/* Btn Prev */}
         <Button className="prev" onClick={handlePrev}>
           &#8249;
