@@ -1,0 +1,1 @@
+.prev,.next{cursor:pointer;transition:all .5s ease;font-weight:700;font-size:1.5rem;padding:.5rem;margin:0 .5rem;border-radius:.5rem;color:inherit;background:transparent}@media screen and (width >= 768px){.prev,.next{font-size:1.7rem}}@media screen and (width >= 1024px){.prev,.next{font-size:2rem}}

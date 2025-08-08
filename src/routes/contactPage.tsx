@@ -1,7 +1,7 @@
 //Import For Motion React
 import { motion } from "motion/react";
 // Import For Components
-import { Cuadros, Enlaces, Nav } from "../components/";
+import { Cuadros, Nav } from "../components/";
 // Import For Services
 import { redes } from "../services/redes";
 
